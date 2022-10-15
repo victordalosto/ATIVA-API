@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <th:block th:replace="~{html/cabecalho :: cabecalho}"></th:block>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="assets/css/estilos-menu.css">
+    <link rel="stylesheet" href="assets/css/estilos-card.css">
+</head>
+
+
+<body>
+
+    <div th:replace="~{html/menu :: menu}">
+    </div>
+
+    <div id="map">
+    </div>
+
+    <div th:replace="~{html/card :: card-legenda}">
+    </div>
+
+    <script src="assets/js/googleAPI.js"></script>
+    <script src="assets/js/eventos.js"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5EqtZdZQt3C5Ex5tXVHHo-8UznAc-e0w&region=BR&language=pt-BR&callback=initMap">
+    </script>
+
+</body>
+</html>

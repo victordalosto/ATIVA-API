@@ -1,0 +1,85 @@
+
+#card-legenda {
+    position: fixed;
+    width: 210px;
+    right: 10px; top: 60px;
+}
+
+#card {
+    border-radius: 10px;
+    background-color: rgb(20, 20, 20);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    overflow: hidden;
+    color: #FFF;
+    opacity: 0.8;
+}
+
+#card-header {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.card-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(0) invert(1);
+    height: 60px;
+    min-width: 50px;
+
+}
+
+.card-icon-legenda {
+    background-image: url(../icons/legenda.svg);
+    transform: scale(0.5);
+}
+
+.card-icon-arrow {
+    background-image: url(../icons/arrow.svg);
+    transform: scale(0.7);
+    transition: all 0.4s ease;
+}
+
+#card-content-title {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#card-content {
+    height: 0;
+    opacity: 0;
+    transition: all .45s;
+    transform: translateY(90px);
+}
+
+.card-content-desc {
+    font-size: 14px;
+    opacity: .8;
+    margin: 4px 0;
+    padding: 5px 0 0 15px;
+}
+
+#card.open {
+    opacity: 1;
+}
+
+#card.open #card-content {
+    height: var(--card-altura);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+#card-header.open .card-icon-arrow {
+  background-image: url(../icons/arrow.svg);
+  transform: rotate(180deg) scale(0.85) translateY(-5px);
+  top: 0%; right: 0;
+}

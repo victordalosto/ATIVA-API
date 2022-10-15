@@ -1,0 +1,212 @@
+
+#menu-barra-lateral {
+  background: rgb(15, 15, 30);
+  height: 100%; width: 70px; 
+  position: fixed; 
+  left: 0; top: 0; 
+  padding: 6px 10px;
+  transition: all 0.5s ease;
+  z-index: 10;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#menu-barra-lateral.open {
+  width: 230px;
+}
+
+.menu-campo-logo {
+  align-items: center;
+  display: flex;
+  height: 60px;
+  position: relative;
+}
+
+.menu-icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0) invert(1);
+  transform: scale(0.6);
+  height: 60px;
+  line-height: 60px;
+  min-width: 50px;
+}
+
+.menu-logo {
+  background-image: url(../icons/logo.svg);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.menu-nome {
+  left: 12px;
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.menu-logo-toggler {
+  background-image: url(../icons/toggler.svg); transform: scale(0.3);
+}
+
+.menu-logo-sinalizacao {
+  background-image: url(../icons/sinalizacao.svg);
+}
+
+.menu-logo-defensa {
+  background-image: url(../icons/defensa.svg);
+}
+
+.menu-logo-defeito {
+  background-image: url(../icons/defeito.svg);
+}
+
+.menu-logo-posto {
+  background-image: url(../icons/posto.svg);
+  transform: scale(0.6);
+}
+
+.menu-logo-gasolina {
+  background-image: url(../icons/gasolina.svg);
+}
+
+.menu-logo-iluminacao {
+  background-image: url(../icons/iluminacao.svg);
+  transform: scale(0.65);
+}
+
+.menu-logo-semaforo {
+  background-image: url(../icons/semaforo.svg);
+  transform: scale(0.5);
+}
+
+.menu-logo-pardal {
+  background-image: url(../icons/pardal.svg);
+  transform: scale(0.5);
+}
+
+.menu-logo-drenagem {
+  background-image: url(../icons/drenagem.svg);
+  transform: scale(0.7);
+}
+
+#menu-barra-lateral.open .menu-campo-logo .menu-logo,
+#menu-barra-lateral.open .menu-campo-logo .menu-nome {
+  opacity: 1;
+}
+
+#menu-barra-lateral .menu-campo-logo #menu-botao-toggler {
+  cursor: pointer;
+  position: absolute;
+  transform: translateY(-50%);
+  transition: all 0.4s ease;
+  top: 50%;  right: 0;
+}
+
+#menu-barra-lateral.open .menu-campo-logo #menu-botao-toggler {
+  background-image: url(../icons/arrow.svg);
+  transform: rotate(90deg);
+  transition: all 0.4s ease;
+  top: 0%; right: 0;
+}
+
+#menu-barra-lateral #menu-nav-list {
+  margin-top: 15px;
+  height: 100%;
+}
+
+#menu-barra-lateral li {
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+
+.menu-tooltip {
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+
+#menu-barra-lateral li:hover .menu-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#menu-barra-lateral.open li .menu-tooltip {
+  display: none;
+}
+
+#menu-barra-lateral li a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: rgb(15, 15, 30);
+}
+
+#menu-barra-lateral li a:hover {
+  background: #FFF;
+}
+
+#menu-barra-lateral li a .menu-link-name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+#menu-barra-lateral.open li a .menu-link-name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#menu-barra-lateral li a:hover .menu-link-name,
+#menu-barra-lateral li a:hover i {
+  transition: all 0.5s ease;
+  filter: brightness(0) invert(0);
+}
+
+#menu-barra-lateral li i {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+
+#menu-barra-lateral.open ~ {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+@media (max-width: 420px) {
+  #menu-barra-lateral li .menu-tooltip{
+    display: none;
+  }
+
+}
