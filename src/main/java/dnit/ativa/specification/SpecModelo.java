@@ -42,21 +42,21 @@ public class SpecModelo {
 
 
 
-    public static Specification<Modelo> condicao(String condicao) {
-        return (root, criteriaQuery, criteriaBuilder) ->  {
-            if (condicao == null)
-                return criteriaBuilder.conjunction();
-            return criteriaBuilder.like(root.get("condicao"), "%" + condicao.toUpperCase() + "%");
-        };
-    }
-
-
-
     public static Specification<Modelo> nome(String nome) {
         return (root, criteriaQuery, criteriaBuilder) ->  {
             if (nome == null)
                 return criteriaBuilder.conjunction();
             return criteriaBuilder.like(root.get("nome"), "%" + nome.toUpperCase() + "%");
+        };
+    }
+
+
+
+    public static Specification<Modelo> condicao(String condicao) {
+        return (root, criteriaQuery, criteriaBuilder) ->  {
+            if (condicao == null)
+                return criteriaBuilder.conjunction();
+            return criteriaBuilder.like(root.get("condicao"), "%" + condicao.toUpperCase() + "%");
         };
     }
 
@@ -89,6 +89,4 @@ public class SpecModelo {
             return criteriaBuilder.lessThanOrEqualTo(root.get("km"), Integer.valueOf(kmf));
         };
     }
-
-    
 }

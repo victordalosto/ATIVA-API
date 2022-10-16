@@ -31,7 +31,6 @@
     filter: brightness(0) invert(1);
     height: 60px;
     min-width: 50px;
-
 }
 
 .card-icon-legenda {
@@ -78,18 +77,14 @@
     transform: translateY(0);
 }
 
-
-#card-header.open .card-icon-arrow {
+#card.open .card-icon-arrow {
   background-image: url(../icons/arrow.svg);
   transform: rotate(180deg) scale(0.85);
   top: 0%; right: 0;
 }
-
 
 @media (max-width: 420px) {
     #card-legenda {
       display: none;
     }
 }
-
-
