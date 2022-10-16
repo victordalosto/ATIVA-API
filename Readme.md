@@ -11,7 +11,7 @@ Os ativos podem ser filtrados considerando as informações rodoviárias ou dado
 
 ![tela-filtro](https://github.com/victordalosto/ATIVA-API/blob/master/documentation/assets/figura2-TelaFiltro.PNG?raw=true)
 
-Toda a parte estética de design das páginas foi carinhosamente desenvolvida pela maravilhosa [Rebeca maria](https://www.linkedin.com/in/rebeca-maria-b977951a6/) :heart:
+Todo o design da página foi carinhosamente desenvolvida pela maravilhosa [Rebeca maria](https://www.linkedin.com/in/rebeca-maria-b977951a6/) :heart:
 
 ![tela-menu](https://github.com/victordalosto/ATIVA-API/blob/master/documentation/assets/figura3-TelaMenu.PNG?raw=true)
 
