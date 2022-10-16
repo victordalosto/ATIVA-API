@@ -1,13 +1,14 @@
 
 // Variaveis de inicializacao
 let map;
+let tipo = 'sinalizacao';
 let nome = condicao = uf = br = km = kmi = kmf = null;
-let maxPontos = 25;
+let maxPontos = 10000;
 const marcadores = [];
 const informacoesMarcadores = [];
 const home = "http://localhost/api/";
 
-uf='DF';
+
 
 // Chama a API do Google Maps
 function initMap() {

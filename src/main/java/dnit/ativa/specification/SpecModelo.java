@@ -34,6 +34,8 @@ public class SpecModelo {
         return (root, criteriaQuery, criteriaBuilder) ->  {
             if (br == null)
                 return criteriaBuilder.conjunction();
+            if (Integer.valueOf(br) <100 && br.length()==2)
+                return criteriaBuilder.equal(root.get("br"), "0" + br.replaceAll("[^0-9]+", ""));
             return criteriaBuilder.equal(root.get("br"), br.replaceAll("[^0-9]+", ""));
         };
     }

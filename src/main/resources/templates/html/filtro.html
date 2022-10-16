@@ -1,0 +1,97 @@
+<div id="filtro-barra-lateral" th:fragment="filtro">
+
+    <div id="filtro">
+
+        <div id="filtro-campo-logo">
+            <span class="filtro-nome">Filtrar</span>
+            <img class='filtro-arrow' src="assets/icons/arrow.svg"></img>
+        </div>
+
+        <ul id="filtro-list">
+
+            <li>
+                <span class="filtro-header-param">Tipo:</span>
+                <select id="filtro-tipo" class="filtro-param">
+                    <option value="sinalizacao">Sinalizacao</option>
+                    <option value="defensa">Defensa - Barreira</option>
+                    <option value="defeito">Defeitos no Pavimento</option>
+                    <option value="posto">Postos de Segurança</option>
+                    <option value="gasolina">Postos de gasolina</option>
+                    <option value="semaforo">Semáforos</option>
+                    <option value="pardal">Barreiras Eletronicas</option>
+                    <option value="iluminacao">Postes de iluminacao</option>
+                </select>
+            </li>
+            
+            <li>
+                <span class="filtro-header-param">Estado:</span>
+                <select id="filtro-uf" class="filtro-param">
+                    <option value=''>Todos os estados</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceara</option>
+                    <option value="DF" selected="selected">Distrito Federal</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraiba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </li>
+
+            <li>
+                <span class="filtro-header-param">Condicao:</span>
+                <select id="filtro-condicao" class="filtro-param">
+                    <option value=''>Todas</option>
+                    <option value="BOM">Bom</option>
+                    <option value="REGULAR">Regular</option>
+                    <option value="RUIM">Ruim</option>
+                </select>
+            </li>
+
+            <li>
+                <span class="filtro-header-param">BR - Rodovia:</span>
+                <input id="filtro-br" class="filtro-param filtro-input" placeholder="010">
+            </li>
+
+            <li>
+                <span class="filtro-header-param">Intervalo de Km:</span>
+                <div id="filtro-divs-km">
+                    <input id="filtro-kmi" class="filtro-param filtro-input filtro-km kmi" placeholder="0"> 
+                    <span>-</span>
+                    <input id="filtro-kmf" class="filtro-param filtro-input filtro-km kmf" placeholder="999">
+                </div>
+            </li>
+            <button id="filtro-botao">Aplicar Filtros</button>
+
+
+            
+
+            <li>
+                <span class="filtro-header-param filtro-header-pontos">Número máximo pontos:</span>
+                <input id="filtro-pontos" class="filtro-param filtro-input" value="10000">
+                <p id="filtro-explicacao-pontos">Define o máximo nº de pontos plotados para visualizadao.</p>
+            </li>
+            
+        </ul>
+
+    </div>
+
+</div>
